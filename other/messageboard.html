@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>有事留言</title>
+	
+	<link rel="stylesheet" href="css/messageboard.css" media="screen" type="text/css" />
+	<style>
+		#con{
+			display: none;
+            margin: 0 auto;
+            border: 1px solid red;
+            overflow: hidden;
+            height: 200px;
+            width: 800px;
+        }
+        .title{
+            color:red;
+            font-size: 20px;
+            width: 20px;
+
+        }
+
+	</style>
+</head>
+<body>
+	<!-- 返回上一个访问过页面 -->
+	<input class="button" name="Submit " type="submit" value="返回" onclick="javascript:history.back()" />
+	<div id ="main">
+		<form>  
+			<input name="name" placeholder="请留下您的姓名......" class="name" required /> 
+			<input name="emailaddress" placeholder="请留下您的邮件地址......" class="email" type="email" required />
+			<textarea rows="4" cols="50" name="subject" placeholder="请留言......" class="message" required></textarea>
+			<input name="submit" class="btn" type="submit" value="发送"  id="ipt"/>
+		</form>
+	</div>
+
+	<!-- 提交空时进行提示 -->
+	<div id="con">
+        <div class="title">
+            Please&nbsp;fill&nbsp;in&nbsp;the&nbsp;message&nbsp;carefully!
+        </div>
+    </div>
+</body>
+<script src="js/ipt.js"></script>
+<script src="js/hint.js"></script>
+</html>
